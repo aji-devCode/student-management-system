@@ -1,1 +1,1 @@
-# student-management-system
+echo # student-management-system
