@@ -1,4 +1,5 @@
 import React from "react";
+import InputBox from "../components/InputBox";
 
 const Homepage = () => {
         return (
@@ -13,35 +14,34 @@ const Homepage = () => {
                                 </div>
                                 <div className="space-y-4">
                                         <div>
-                                                <p className="text-sm font-medium text-gray-700 mb-1">
-                                                        Email address
-                                                </p>
-                                                <input
-                                                        type="text"
+                                                <InputBox
+                                                        type="email"
                                                         placeholder="Enter email address"
-                                                        required
+                                                        required={true}
                                                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                                        />
+                                                        label="Email address"
+                                                />
                                         </div>
                                         <div>
-                                                <p className="text-sm font-medium text-gray-700 mb-1">Password</p>
-                                                <input
+                                                <InputBox
                                                         type="password"
                                                         placeholder="Enter Password"
+                                                        required={true}
                                                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                                        label="Password"
                                                 />
                                         </div>
                                 </div>
-                                <div>
-                                        <button className="bg-blue-500 w-full py-2">
+                                <div className="mt-4">
+                                        <button className="bg-blue-500 w-full py-2 cursor-pointer hover:bg-blue-400 transition-colors duration-300">
                                                 <p className="text-white font-bold text-lg">Login</p>
                                         </button>
                                         <div>
                                                 <p className="text-sm text-gray-600 mt-4 text-center">
                                                 Don't have an account?{" "}
-                                                <a href="/register" className="text-blue-500 hover:underline">
-                                                Register here
-                                                </a>
+                                                        <a href="/register" className="text-blue-500 hover:underline">
+                                                        Register here
+                                                        </a>
                                                 </p>
                                         </div>
                                 </div>
